@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Authentication</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    /* Custom CSS for dropdown */
+    #role {
+      width: 100%; /* Set the dropdown width to 100% */
+      padding: 8px; /* Add padding to match the input fields */
+      box-sizing: border-box; /* Include padding and border in element's total width and height */
+    }
+  </style>
+</head>
+<body>
+    <button class="tablinks" onclick="window.location.href = `/index.html`">
+        <i styles="font-size:15rem" class="fa fa-home"></i>
+      </button>
+  <div class="container">
+    <h2>User Authentication</h2>
+   
+    <!-- Signup Form -->
+    <div id="Signup" class="tabcontent" >
+      <form id="signupForm">
+        <div class="form-group">
+          <input type="text" id="signupUsername" name="signupUsername" placeholder="Username" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="signupPassword" name="signupPassword" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+        </div>
+        <div class="form-group">
+          <!-- Dropdown menu -->
+          <select id="role" name="role">
+            <option value="Manufacturer">Manufacturer</option>
+            <option value="Seller">Seller</option>
+            <option value="Consumer">Consumer</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+        <button type="submit">Signup</button>
+      </form>
+    </div>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</body>
+</html>

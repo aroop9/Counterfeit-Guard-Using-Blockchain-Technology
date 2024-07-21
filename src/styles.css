@@ -1,0 +1,72 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 350px; /* Increased container width */
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px; /* Increased font size */
+  font-weight: bold;
+  color: #333; /* Orange color */
+}
+
+.form-group {
+  margin-bottom: 25px; /* Increased margin bottom */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 92%;
+  padding: 14px; /* Increased padding */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 18px; /* Increased font size */
+  font-weight: bold;
+}
+
+button {
+  width: 100%;
+  padding: 14px; /* Increased padding */
+  border: none;
+   /* Orange color */
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px; /* Increased font size */
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background: rgba(0, 0, 0, 0.5);; /* Darker shade of orange */
+}
+
+#error {
+  color: red;
+}
+
+.tablinks{
+  position:absolute;
+  width: 80px;; 
+  top:0;
+  left:0;
+  margin:50px;
+  
+}
